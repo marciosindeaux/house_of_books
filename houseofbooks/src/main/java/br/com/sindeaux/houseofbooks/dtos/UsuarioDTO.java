@@ -1,18 +1,20 @@
 package br.com.sindeaux.houseofbooks.dtos;
 
+
+import javax.validation.constraints.NotNull;
+
 public class UsuarioDTO {
+
     private Long id;
+
+    @NotNull
     private String nome;
-    private String emal;
+
+    @NotNull
+    private String email;
+
+    @NotNull
     private String senha;
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
 
     public Long getId() {
         return id;
@@ -30,11 +32,19 @@ public class UsuarioDTO {
         this.nome = nome;
     }
 
-    public String getEmal() {
-        return emal;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmal(String emal) {
-        this.emal = emal;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }

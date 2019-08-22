@@ -18,7 +18,7 @@ public class ResponseDTO {
         this.httpStatus = httpStatus;
     }
 
-    public ResponseDTO(String mensagem, Object data, HttpStatus httpStatus) {
+    public ResponseDTO(Object data, String mensagem, HttpStatus httpStatus) {
         this.mensagem = mensagem;
         this.data = data;
         this.httpStatus = httpStatus;

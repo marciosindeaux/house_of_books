@@ -10,8 +10,17 @@ public class UsuarioConverter {
 
         payload.setSenha(usuarioDTO.getSenha());
         payload.setNome(usuarioDTO.getNome());
-        payload.setEmal(usuarioDTO.getEmal());
+        payload.setEmail(usuarioDTO.getEmail());
 
         return payload;
+    }
+
+    public static UsuarioDTO convertUsuarioToUsuarioDTO(Usuario usuario){
+        UsuarioDTO usuarioDTO = new UsuarioDTO();
+
+        usuarioDTO.setEmail(usuario.getEmail());
+        usuarioDTO.setNome(usuario.getNome());
+        usuarioDTO.setId(usuario.getId());
+        return usuarioDTO;
     }
 }
